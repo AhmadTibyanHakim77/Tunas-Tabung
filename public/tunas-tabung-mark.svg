@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+    <defs>
+        <linearGradient id="coin-face" x1="32" y1="38" x2="84" y2="93" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F2D98B" />
+            <stop offset=".45" stop-color="#E7C76A" />
+            <stop offset="1" stop-color="#D9A928" />
+        </linearGradient>
+        <linearGradient id="coin-edge" x1="27" y1="82" x2="100" y2="102" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#B78023" />
+            <stop offset=".52" stop-color="#D9A928" />
+            <stop offset="1" stop-color="#A9701B" />
+        </linearGradient>
+        <linearGradient id="leaf" x1="52" y1="27" x2="95" y2="55" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A3A882" />
+            <stop offset="1" stop-color="#75805F" />
+        </linearGradient>
+        <filter id="soft-shadow" x="8" y="10" width="112" height="111" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0B1428" flood-opacity=".16" />
+        </filter>
+    </defs>
+    <g filter="url(#soft-shadow)">
+        <path d="M19 65C19 80.5 38.3 93 62 93s43-12.5 43-28v8c0 15.5-19.3 28-43 28S19 88.5 19 73v-8Z" fill="url(#coin-edge)" />
+        <path d="M20 64C20 48.5 38.8 36 62 36s42 12.5 42 28-18.8 28-42 28S20 79.5 20 64Z" fill="url(#coin-face)" stroke="#F2D98B" stroke-width="2" />
+        <path d="M27 62C28.4 50.2 43.5 41 62 41s33.6 9.2 35 21" stroke="#B8872A" stroke-opacity=".62" stroke-width="2" stroke-linecap="round" />
+        <text x="60.5" y="70.5" fill="#0B1428" font-family="Avenir Next, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="-.8" text-anchor="middle">Rp</text>
+        <path d="M69 63C72.4 53.4 74.3 45.7 78.5 37.8" stroke="#75805F" stroke-width="3.5" stroke-linecap="round" />
+        <path d="M76.9 40.8C75.3 30.4 82 22.9 95.8 20.4C96 33.3 89.5 40.5 77.5 42.2L76.9 40.8Z" fill="url(#leaf)" />
+        <path d="M72.4 51.8C64.7 42.8 54.9 42.2 48.2 47.3C53.2 57.1 63.5 59.4 73.1 53.2L72.4 51.8Z" fill="url(#leaf)" />
+        <path d="M80.2 38.4C85 34.3 89.2 29.6 92.1 24.4M70.2 51.9C63.9 49.7 58.3 48.9 52.5 49.4" stroke="#E4D7A5" stroke-opacity=".78" stroke-width="1.2" stroke-linecap="round" />
+    </g>
+</svg>
