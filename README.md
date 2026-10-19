@@ -1,107 +1,178 @@
-# Tunas Tabung
+# 🌱 Tunas Tabung
 
-Aplikasi tabungan siswa sekolah dasar yang dikelola guru. Guru dapat mengelola data siswa, mencatat setoran dan penarikan, serta melihat saldo dan riwayat transaksi.
+**Tunas Tabung** adalah aplikasi manajemen tabungan siswa berbasis web yang dirancang untuk membantu sekolah dalam mengelola data siswa, transaksi tabungan, dan informasi saldo secara lebih terstruktur, efisien, dan mudah digunakan.
 
-## Fitur
+Aplikasi ini dikembangkan dengan pendekatan antarmuka modern dan responsif sehingga dapat digunakan oleh pengelola tabungan sekolah dalam melakukan pencatatan serta pemantauan aktivitas tabungan siswa.
 
-- Akses lokal tanpa login untuk dashboard, siswa, dan transaksi.
-- Dashboard ringkasan jumlah siswa, setoran, penarikan, saldo, dan transaksi terbaru.
-- CRUD siswa, pencarian, filter kelas, dan penonaktifan siswa.
-- Pencatatan setoran dan penarikan dengan validasi saldo.
-- Riwayat transaksi dan detail tabungan siswa.
-- Saldo dihitung dari transaksi setoran dikurangi penarikan.
+---
 
-## Teknologi
+## ✨ Fitur Utama
 
-- PHP 8.3+ dan Laravel 13
-- Blade, Tailwind CSS 4, Vite
-- SQLite secara default; MySQL/MariaDB dan PostgreSQL tersedia melalui konfigurasi Laravel
-- PHPUnit
+### 📊 Dashboard
 
-## Menjalankan aplikasi
+Dashboard menyediakan ringkasan informasi tabungan secara terpusat.
 
-1. Pasang dependency PHP dan frontend:
+- Total siswa
+- Total saldo tabungan
+- Total transaksi
+- Ringkasan aktivitas tabungan
+- Statistik transaksi
+- Grafik perkembangan tabungan
+- Informasi transaksi terbaru
 
-    ```sh
-    composer install
-    npm install
-    ```
+Dashboard dirancang agar informasi penting dapat dipahami dengan cepat tanpa harus membuka halaman satu per satu.
 
-2. Siapkan environment dan database:
+### 👨‍🎓 Manajemen Data Siswa
 
-    ```sh
-    cp .env.example .env
-    php artisan key:generate
-    touch database/database.sqlite
-    php artisan migrate --seed
-    ```
+Fitur pengelolaan data siswa digunakan untuk menyimpan dan mengatur informasi siswa.
 
-    Seeder development membuat 8 siswa fiktif dan contoh transaksi. Atur koneksi dan kredensial database melalui `.env` bila menggunakan database selain SQLite. Akses aplikasi saat ini tidak memerlukan akun.
+Fitur meliputi:
 
-3. Bangun aset dan jalankan server:
+- Menampilkan daftar siswa
+- Menambahkan siswa
+- Mengubah data siswa
+- Menghapus data siswa
+- Melihat detail siswa
+- Melihat saldo tabungan siswa
+- Pencarian data siswa
+- Pengelompokan berdasarkan kelas
 
-    ```sh
-    npm run build
-    php artisan serve
-    ```
+### 💰 Manajemen Transaksi
 
-    Untuk pengembangan frontend, jalankan `npm run dev` pada terminal terpisah.
+Sistem transaksi digunakan untuk mencatat seluruh aktivitas tabungan siswa.
 
-## Tes
+Jenis transaksi:
 
-```sh
-php artisan test
-```
+- Setoran tabungan
+- Penarikan tabungan
 
-Tes menggunakan SQLite in-memory dan mencakup akses tanpa login, data siswa, transaksi setoran/penarikan, saldo tidak mencukupi, serta tampilan detail tabungan.
+Informasi transaksi mencakup:
 
-## Struktur utama
+- Nama siswa
+- Jenis transaksi
+- Nominal
+- Tanggal transaksi
+- Keterangan
+- Saldo setelah transaksi
 
-- `app/Models` — pengguna, siswa, dan transaksi tabungan.
-- `app/Http/Controllers` — autentikasi, dashboard, siswa, dan transaksi.
-- `database/migrations` — skema pengguna, siswa, dan transaksi.
-- `resources/views` — antarmuka Blade.
-- `routes/web.php` — rute web dan akses guru.
+Setiap transaksi tercatat secara terstruktur sehingga riwayat tabungan dapat ditelusuri dengan mudah.
 
-# TUNAS TABUNG - AGENT RULES
+### 📈 Statistik dan Grafik
 
-## Project
+Tunas Tabung menyediakan visualisasi data untuk membantu pengguna memahami perkembangan tabungan.
 
-Laravel application for managing student savings.
+Visualisasi dapat digunakan untuk menampilkan:
 
-## Working rules
+- Perkembangan saldo
+- Jumlah setoran
+- Jumlah penarikan
+- Aktivitas transaksi
+- Statistik tabungan siswa
 
-- Work directly in the current workspace.
-- Inspect existing implementation before changing it.
-- Reuse existing components, routes, models, and styles.
-- Do not rewrite working code unnecessarily.
-- Never create duplicate functionality.
-- Never claim a task is complete without verifying it.
-- Run relevant tests after changes.
-- Fix errors found during verification.
-- Keep the implementation production-ready.
-- Use Indonesian for UI text.
-- Keep UI consistent across all pages.
-- Use accessible HTML and responsive layouts.
-- Follow existing Laravel conventions.
+Grafik membantu pengguna memperoleh informasi tanpa harus membaca seluruh data transaksi secara manual.
 
-## Autonomy
+### 🔎 Pencarian dan Pengelolaan Data
 
-- Execute the requested task directly.
-- Do not provide a long implementation plan unless requested.
-- Do not stop after analysis.
-- Do not ask for confirmation for ordinary file edits or terminal commands.
-- If an implementation error occurs, diagnose and fix it.
-- Continue until the requested feature is actually working.
+Sistem menyediakan fitur untuk mempermudah pengelolaan data dalam jumlah banyak.
 
-## Quality
+- Search siswa
+- Filter data
+- Sorting data
+- Pagination
+- Detail data
+- Riwayat transaksi
 
-Before finishing:
+---
 
-1. Check changed files.
-2. Check routes.
-3. Check PHP syntax where applicable.
-4. Run relevant Laravel tests.
-5. Run frontend checks where applicable.
-6. Fix discovered errors.
-7. Verify the final result.
+## 🎨 User Interface
+
+Tunas Tabung menggunakan konsep desain modern yang mengutamakan:
+
+- Clean interface
+- Soft 3D visual
+- Glassmorphism
+- Rounded components
+- Subtle shadow
+- Smooth animation
+- Responsive layout
+- Visual hierarchy
+- Consistent spacing
+- Modern dashboard design
+
+Desain dibuat agar aplikasi tetap terlihat profesional tanpa mengurangi kemudahan penggunaan.
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+- **PHP**
+- **Laravel**
+- **Laravel Blade**
+- **Laravel Eloquent ORM**
+
+### Frontend
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Blade Template**
+
+### Database
+
+- **MySQL**
+
+### Development Tools
+
+- **Composer**
+- **Node.js**
+- **NPM**
+- **Git**
+- **GitHub**
+- **Visual Studio Code**
+
+---
+
+## 📁 Project Structure
+
+Struktur utama aplikasi Laravel:
+
+```text
+TUNAS TABUNG/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Middleware/
+│   │   └── Requests/
+│   └── Models/
+│
+├── bootstrap/
+│
+├── config/
+│
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeders/
+│
+├── public/
+│
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│
+├── routes/
+│   ├── web.php
+│   └── api.php
+│
+├── storage/
+│
+├── tests/
+│
+├── .env.example
+├── artisan
+├── composer.json
+├── package.json
+└── README.md
